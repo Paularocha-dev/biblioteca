@@ -1,0 +1,89 @@
+def ler_resposta(mensagem):
+    while True:
+        resposta = input(mensagem).strip().upper()
+        if resposta in ["S", "N"]:
+            return resposta
+        else:
+            print("Erro: Por favor, responda com 'S' para sim ou 'N' para não.")
+
+def ler_genero(mensagem):
+    generos_validos = ["CLASSICO", "FANTASIA", "POEMA", "ROMANCE", "TERROR", "BIOGRAFIA"]
+    while True:
+        genero = input(mensagem).strip().upper()
+        if genero in generos_validos:
+            return genero
+        else:
+            print("Erro: Por favor, escolha um gênero válido (CLASSICO, FANTASIA, POEMA, ROMANCE, TERROR, BIOGRAFIA).")
+
+resposta = ler_resposta("Deseja ter acesso ao menu de livros disponíveis? (S/N): ")
+
+if resposta == "S":
+    genero = ler_genero("Escolha o gênero do livro (CLASSICO, FANTASIA, POEMA, ROMANCE, TERROR, BIOGRAFIA): ")
+    
+    if genero == "CLASSICO":
+        print("Dom Quixote - Miguel de Cervantes")
+        print("Os três mosqueteiros - Alexandre Dumas")
+        print("Moby Dick - Herman Melville")
+        print("Crime e Castigo - Fiódor Dostoiévski")
+        print("O Grande Gatsby - F. Scott Fitzgerald")
+        print("1984 - George Orwell")
+        print("A Odisséia - Homero")
+        print("Guerra e Paz - Liev Tolstói")
+        print("Retrato de Dorian Gray - Oscar Wilde")
+        print("Os Miseráveis - Victor Hugo")
+    elif genero == "FANTASIA":
+        print("O Senhor dos Anéis - J.R.R. Tolkien")
+        print("Harry Potter - J.K. Rowling")
+        print("As Crônicas de Nárnia - C.S. Lewis")
+        print("O Hobbit - J.R.R. Tolkien")
+        print("A Roda do Tempo - Robert Jordan")
+        print("O Nome do Vento - Patrick Rothfuss")
+        print("A Canção do Gelo e Fogo - George R.R. Martin")
+        print("Mistborn: Nascidos da Bruma - Brandon Sanderson")
+        print("American Gods - Neil Gaiman")
+    elif genero == "POEMA":
+        print("Divina Comédia - Dante Alighieri")
+        print("Ilíada - Homero")
+        print("O Corvo e Outros Poemas - Edgar Allan Poe")
+        print("As Flores do Mal - Charles Baudelaire")
+        print("Folhas de Relva - Walt Whitman")
+        print("Cantos de Maldoror - Comte de Lautréamont")
+        print("A Eneida - Virgílio")
+        print("Paraíso Perdido - John Milton")
+        print("Cem Sonetos de Amor - Pablo Neruda")
+        print("Odes - Horácio")
+    elif genero == "ROMANCE":
+        print("Orgulho e Preconceito - Jane Austen")
+        print("Anna Karenina - Liev Tolstói")
+        print("Jane Eyre - Charlotte Brontë")
+        print("O Morro dos Ventos Uivantes - Emily Brontë")
+        print("Madame Bovary - Gustave Flaubert")
+        print("Cem Anos de Solidão - Gabriel García Márquez")
+        print("A Montanha Mágica - Thomas Mann")
+        print("Grandes Esperanças - Charles Dickens")
+        print("O Amor nos Tempos do Cólera - Gabriel García Márquez")
+        print("Doutor Jivago - Boris Pasternak")
+    elif genero == "TERROR":
+        print("Drácula - Bram Stoker")
+        print("Frankenstein - Mary Shelley")
+        print("O Iluminado - Stephen King")
+        print("It: A Coisa - Stephen King")
+        print("O Exorcista - William Peter Blatty")
+        print("A Assombração da Casa da Colina - Shirley Jackson")
+        print("O Chamado de Cthulhu - H.P. Lovecraft")
+        print("O Médico e o Monstro - Robert Louis Stevenson")
+        print("O Bebê de Rosemary - Ira Levin")
+        print("Hell House - Richard Matheson")
+    elif genero == "BIOGRAFIA":
+        print("Steve Jobs - Walter Isaacson")
+        print("Longa Caminhada até a Liberdade - Nelson Mandela")
+        print("A História de Minha Vida - Helen Keller")
+        print("O Diário de Anne Frank - Anne Frank")
+        print("Eu Sei Por Que o Pássaro Canta na Gaiola - Maya Angelou")
+        print("Churchill: Uma Vida - Martin Gilbert")
+        print("Alexander Hamilton - Ron Chernow")
+        print("Gandhi: A Autobiografia - Mahatma Gandhi")
+        print("A Vida Imortal de Henrietta Lacks - Rebecca Skloot")
+        print("Albert Einstein: Uma Biografia - Walter Isaacson")
+else:
+    print("Acesso ao menu de livros disponíveis negado.")
