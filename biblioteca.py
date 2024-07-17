@@ -34,7 +34,19 @@ def ler_selecoes(mensagem, max_opcoes):
         else:
             print(f"Erro: Por favor, escolha até 10 números entre 1 e {max_opcoes}.")
 
+def ler_informacao(mensagem, validacao=None):
+    while True:
+        informacao = input(mensagem).strip()
+        if validacao:
+            if validacao(informacao):
+                return informacao
+            else:
+                print("Informações invalidas.")
+        else:
+            return informacao
+
 # Dicionários de livros
+
 classicos = {
     '1': 'Dom Quixote - Miguel de Cervantes',
     '2': 'Os três mosqueteiros - Alexandre Dumas', 
@@ -167,6 +179,18 @@ if resposta == "S":
         total += precos[genero]
 
     print(f"\nO total a pagar é: R${total:.2f}")
+
+ print("\nPor favor, forneça suas informações para cadastro.")
+    nome = ler_informacao("Nome completo: ")
+    email = ler_informacao("Email: ")
+    cpf = ler_informacao("CPF (formato XXX.XXX.XXX-XX): ")
+    telefone = ler_informacao("Telefone (formato (XX) XXXXX-XXXX): ")
+
+    print("\nCadastro realizado com sucesso!")
+    print(f"Nome: {nome}")
+    print(f"Email: {email}")
+    print(f"CPF: {cpf}")
+    print(f"Telefone: {telefone}")
 
 else:
     print("Acesso ao menu de livros disponíveis negado.")
